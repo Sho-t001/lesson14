@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Table(name = "employees")
 @NamedQueries({
     @NamedQuery(
-            name = "getAllEmpolyees",
+            name = "getAllEmployees",
             query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"),
 
     @NamedQuery(

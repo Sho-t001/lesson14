@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -15,8 +16,8 @@
             <div id="content">
                 ${param.content}
             </div>
-            <div id ="footer">
-                by Sho.t
+            <div id="footer">
+                by Taro Kirameki.
             </div>
         </div>
     </body>
