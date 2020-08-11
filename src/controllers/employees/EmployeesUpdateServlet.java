@@ -60,7 +60,7 @@ public class EmployeesUpdateServlet extends HttpServlet {
             //パスワードの入力値を行う指定をする
             Boolean password_check_flag = true;
             String password = request.getParameter("password");
-            if(password == null || password.equals("")){
+            if(password == null || password.equals("")) {
                 password_check_flag = false;
             } else {
                 e.setPassword(

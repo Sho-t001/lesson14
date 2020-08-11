@@ -19,23 +19,21 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllEmployees",
-            query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"),
-
+            query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"
+            ),
     @NamedQuery(
             name = "getEmployeesCount",
-            query = "SELECT COUNT(e) FROM Employee AS e"),
-
+            query = "SELECT COUNT(e) FROM Employee AS e"
+            ),
     @NamedQuery(
             name = "checkRegisteredCode",
-            query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"),
-
+            query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
+            ),
     @NamedQuery(
             name = "checkLoginCodeAndPassword",
-            query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass")
-
+            query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
+            )
 })
-
-
 @Entity
 public class Employee {
     @Id
@@ -64,66 +62,67 @@ public class Employee {
     @Column(name = "delete_flag", nullable = false)
     private Integer delete_flag;
 
-    public Integer getId(){
+    public Integer getId() {
         return id;
     }
-    public void setId(Integer id){
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
-
-    public String getCode(){
+    public String getCode() {
         return code;
     }
-    public void setCode(String code){
+
+    public void setCode(String code) {
         this.code = code;
     }
 
-
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
-    public void setPassword(String password){
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
-
-    public Integer getAdmin_flag(){
+    public Integer getAdmin_flag() {
         return admin_flag;
     }
-    public void setAdmin_flag(Integer admin_flag){
+
+    public void setAdmin_flag(Integer admin_flag) {
         this.admin_flag = admin_flag;
     }
 
-
-    public Timestamp getCreated_at(){
+    public Timestamp getCreated_at() {
         return created_at;
     }
-    public void setCreated_at(Timestamp created_at){
+
+    public void setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
     }
 
-
-    public Timestamp getUpdated_at(){
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
-    public void setUpdated_at(Timestamp updated_at){
+
+    public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
 
-
-    public Integer getDelete_flag(){
+    public Integer getDelete_flag() {
         return delete_flag;
     }
-    public void setDelete_flag(Integer delete_flag){
+
+    public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
 }
