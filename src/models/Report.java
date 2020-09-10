@@ -67,6 +67,13 @@ public class Report {
     private Timestamp updated_at;
 
 
+  //出退勤時刻を日報の項目として追加
+    @Column(name = "going", nullable = false)
+    private String going;
+    @Column(name = "leaving", nullable = false)
+    private String leaving;
+
+
 
     public Integer getId(){
         return id;
@@ -122,4 +129,23 @@ public class Report {
     public void setUpdated_at(Timestamp updated_at){
         this.updated_at = updated_at;
     }
+
+    //出退勤時刻を日報の項目として追加
+    public String getGoing(){
+        return going;
+    }
+    public void setGoing(String going){
+        this.going = going;
+    }
+
+    //出退勤時刻を日報の項目として追加
+    public String getLeaving(){
+        return leaving;
+    }
+    public void setLeaving(String leaving){
+        this.leaving = leaving;
+    }
+
+
+
 }

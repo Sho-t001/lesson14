@@ -21,6 +21,15 @@
 <br /><br />
 
 
+<label for="going">出勤時間</label><br />
+<input type="time" name="going" value="${report.going}" />
+<br /><br />
+
+<label for="leaving">退勤時間</label><br />
+<input type="time" name="leaving" value="${report.leaving}" />
+<br /><br />
+
+
 <label for="title">タイトル</label><br />
 <input type="text" name="title" value="${report.title}" />
 <br /><br />
